@@ -5,7 +5,7 @@ local preprocess = require "preprocessor"
 local function parse_arguments(args)
   local ret = {}
   for i, arg in ipairs(args) do
-    local k, v = arg.match(arg, "(%w+)=(%w+)")
+    local k, v = arg.match(arg, "([%w_]+)=([%w_]+)")
     if k and v then
       ret[k] = v
     end
